@@ -1,0 +1,83 @@
+body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.logo{
+    height:80px;
+    width:180px;
+    margin-left:20px;
+    margin-top: 20px;
+}
+.main{
+    background: url("/public/landing-background.bc50e450.jpg");
+    max-height: 100%;
+    cursor:pointer;
+}
+.one{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+select[id="dropdown"]{
+    font-size:20px;
+    font-weight:500;
+    background-color: rgb(234, 12, 12);
+    color:white;
+    height:5vh;
+}
+.sign{
+   font-size:20px;
+   font-weight: 500;
+   border:2px solid rgb(255,0,0);
+   margin:30px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   border-radius:5px;
+   text-decoration: none;
+   padding:3px;
+   background-color:rgb(255, 0, 0);
+   color:white;
+}
+.label{
+    color:white;
+    text-align:center;
+    margin-top:250px;
+    font-size:30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.sub{
+    font-size:25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align:center;
+    padding-bottom: 0;
+}
+.ready{
+    font-size:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom:0
+}
+.mail{
+    text-align:center;
+}
+input[placeholder]{
+    height:5vh;
+    width:30vw;
+    border-radius:5px;
+    border:2px solid black;
+    background-color: black;
+    color:white;
+    font-size:20px;
+    font-weight: 100;
+}
+.button{
+    height:5vh;
+    width:10vw;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    border:1px solid white;
+    background-color: rgb(255, 0, 0);
+    color:white;
+}
