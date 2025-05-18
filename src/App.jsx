@@ -1,15 +1,26 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Netflix from "./Projects/Netflix";  // Home Page
-import Signin from "./Projects/Signin";  // Sign In Page
-import Password from "./Projects/Password";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import MovieList from "./components/MovieList";
+import Movie from "./components/Movie";
+import SearchResults from "./components/SearchResults";  // Import this!
+import './App.css';
+
 function App() {
   return (
-    <Routes> 
-      <Route path="/" element={<Netflix />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/password" element={<Password />} />
-    </Routes>
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="movie/:id" element={<Movie />} />
+        <Route path="movies/:type" element={<MovieList />} />
+        
+        {/* Add this new route for search */}
+        <Route path="search/:query" element={<SearchResults />} />
+        
+        <Route path="/*" element={<h1>Error Page</h1>} />
+      </Routes>
+    </div>
   );
 }
 

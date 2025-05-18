@@ -1,0 +1,21 @@
+.loading, .error, .no-movies {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+.list__title {
+  margin: 20px;
+  font-size: 2rem;
+  color: #f5c518;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,180 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 10px 20px;
+  position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 200;
+}
+
+/* Left side: logo and menu button */
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__logo img {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Hamburger menu button */
+.header__menuButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* hidden by default, shown on mobile via media query */
+}
+
+/* Navigation */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: max-height 0.3s ease;
+}
+
+/* Navigation links */
+.header__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header__link:hover,
+.header__link.active {
+  color: #f5c518; /* IMDb yellow */
+}
+
+/* Search form */
+.header__searchForm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__searchInput {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.header__searchButton {
+  background-color: #f5c518;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button hover effect */
+.header__searchButton:hover {
+  background-color: #d4b509;
+}
+
+/* MOBILE / TABLET RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .header__menuButton {
+    display: block;
+  }
+
+  /* Hide nav by default */
+  .header__nav {
+    flex-direction: column;
+    background-color: #121212;
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+  }
+
+  /* Show nav when open */
+  .header__nav.header__nav--open {
+    max-height: 400px; /* enough height to show content */
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  /* Stack links vertically */
+  .header__link {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    width: 100%;
+    border-bottom: 1px solid #333;
+  }
+
+  /* Search form full width */
+  .header__searchForm {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .header__searchInput {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .header__searchButton {
+    width: 20%;
+    padding: 8px 0;
+  }
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 769px) {
+  .header__nav {
+    max-height: none !important;
+  }
+
+  .header__nav.header__nav--open {
+    max-height: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav {
+    flex-direction: column;
+    background-color: #121212;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    padding: 0 20px;
+  }
+
+  .header__nav.header__nav--open {
+    max-height: 500px; /* enough for menu */
+    opacity: 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

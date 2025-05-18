@@ -1,0 +1,47 @@
+/* Search Results Container */
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Movie Card */
+.search-results__card {
+  width: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.search-results__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Movie Poster */
+.search-results__poster {
+  width: 100%;
+  border-bottom: 2px solid #f5c518;
+}
+
+/* Movie Info */
+.search-results__info {
+  padding: 10px;
+}
+
+.search-results__info h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #f5c518;
+}
+
+.search-results__info p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 5px 0 0;
+}

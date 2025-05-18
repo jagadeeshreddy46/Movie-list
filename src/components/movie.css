@@ -1,0 +1,211 @@
+/* General Movie Container */
+.movie {
+  color: #f4f4f4;
+  background-color: #111;
+  min-height: 100vh;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Movie Intro (Backdrop) */
+.movie__intro {
+  margin-bottom: 30px;
+}
+
+.movie__intro img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-bottom: 5px solid #444;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.movie__intro img:hover {
+  transform: scale(1.03);
+}
+
+/* Movie Detail Section */
+.movie__detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Left Poster Section */
+.movie__detailLeft {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie__posterBox img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+}
+
+.movie__posterBox img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Detail Section */
+.movie__detailRight {
+  flex: 2 1 600px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Movie Title and Tagline */
+.movie__name {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #f5c518;
+}
+
+.movie__tagline {
+  font-style: italic;
+  color: #bbb;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Movie Info (Rating, Runtime, Release Date) */
+.movie__info {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.movie__rating,
+.movie__runtime,
+.movie__releaseDate {
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+}
+
+/* Movie Genres */
+.movie__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.movie__genre {
+  background-color: #555;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.movie__genre:hover {
+  background-color: #777;
+}
+
+/* Synopsis and Production */
+.synopsisText,
+.productionText {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f5c518;
+}
+
+.synopsisContent {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Read More Toggle */
+.synopsisToggle {
+  color: #f5c518;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.synopsisToggle:hover {
+  color: #ffcc00;
+}
+
+/* Production Logos */
+/* Production Logos */
+.movie__productionLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.movie__productionCompanyLogo {
+  max-height: 80px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #222;
+  padding: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.movie__productionCompanyLogo:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  background-color: #333;
+}
+
+
+/* Loading State */
+.loading {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 50px;
+}
+
+/* Watch Now Button */
+.watchNowButton {
+  display: inline-block;
+  background-color: #e50914;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.watchNowButton:hover {
+  background-color: #f40612;
+  transform: scale(1.05);
+}
+
+.watchNowButton.disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.watchNowButton:active {
+  transform: scale(0.95);
+}

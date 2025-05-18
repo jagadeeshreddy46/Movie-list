@@ -1,0 +1,153 @@
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and button */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Style your IMDb logo if needed */
+.imdb-logo {
+  height: 40px; /* adjust as needed */
+  width: auto;
+}
+
+/* Adjust theme toggle button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+/* ===== Poster Carousel ===== */
+.posterImage {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.posterImage img {
+  width: 100%;
+  max-height: 600px; /* increased height */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.posterImage img:hover {
+  transform: scale(1.03);
+}
+
+/* Overlay with gradient */
+.posterImage__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 30px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 90%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Movie Title */
+.posterImage__title {
+  font-size: 3rem; /* bigger font */
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+/* Runtime and Rating */
+.posterImage__runtime {
+  font-size: 1.25rem;
+  color: #eee;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.posterImage__rating {
+  background-color: #e50914;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 8px #e50914;
+}
+
+.posterImage__rating i {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* Movie Description */
+.posterImage__description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-height: 140px; /* limit height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ddd;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* ===== Loading, Error & No Movies States ===== */
+.loading,
+.error,
+.no-movies {
+  color: #fff;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .posterImage img {
+    max-height: 400px;
+  }
+
+  .posterImage__title {
+    font-size: 2rem;
+  }
+
+  .posterImage__runtime {
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .posterImage__rating {
+    padding: 4px 10px;
+    font-size: 0.9rem;
+  }
+
+  .posterImage__description {
+    font-size: 1rem;
+    max-height: 100px;
+  }
+}
