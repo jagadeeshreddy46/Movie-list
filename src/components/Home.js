@@ -9,7 +9,6 @@ const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     const fetchPopularMovies = async () => {
@@ -32,15 +31,6 @@ const Home = () => {
     fetchPopularMovies();
   }, []);
 
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-  };
-
   if (loading) return <div className="loading">Loading popular movies...</div>;
 
   if (error) return <div className="error">Error: {error}</div>;
@@ -50,10 +40,6 @@ const Home = () => {
 
   return (
     <>
-      <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
-        {theme === "dark" ? "☀️" : "🌙"}
-      </button>
-
       <div className="poster">
         <Carousel
           showThumbs={false}

@@ -28,6 +28,7 @@ const Header = () => {
             alt="IMDB Logo"
           />
         </Link>
+
         <button
           className="header__menuButton"
           onClick={toggleMenu}
@@ -41,26 +42,25 @@ const Header = () => {
         <NavLink
           to="/movies/popular"
           className="header__link"
-          onClick={toggleMenu}
+          onClick={() => setMenuOpen(false)}
         >
-          Popular
+          Popular🔥
         </NavLink>
         <NavLink
           to="/movies/top_rated"
           className="header__link"
-          onClick={toggleMenu}
+          onClick={() => setMenuOpen(false)}
         >
-          Top Rated
+          Top Rated👌
         </NavLink>
         <NavLink
           to="/movies/upcoming"
           className="header__link"
-          onClick={toggleMenu}
+          onClick={() => setMenuOpen(false)}
         >
-          Upcoming
+          Upcoming😊
         </NavLink>
 
-        {/* Search Form */}
         <form className="header__searchForm" onSubmit={handleSearch}>
           <input
             type="text"

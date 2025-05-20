@@ -14,25 +14,6 @@
   width: auto;
 }
 
-/* Adjust theme toggle button */
-.theme-toggle {
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--text-color);
-  padding: 6px 10px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-
-
 /* ===== Poster Carousel ===== */
 .posterImage {
   position: relative;
